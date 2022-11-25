@@ -4,15 +4,14 @@ import './Detailstyles.css'
 function Detailimage(data1) {
 
 
-  let [imgsrc, setimgsrc] = useState(data1)
-  useEffect(() => { setimgsrc(data1)},[])
+  console.log(data1)
 
   return (
     <div className='Detail-img-comp'>
-    <img src="https://shop.de.q-railing.com/product/image/medium/100519_0.jpg"/>
+    <img src={data1.data1} width="500px"/>
     <div>
-      <img src="https://shop.de.q-railing.com/product/image/medium/100519_0.jpg" width="100" height="100"/>
-      <img src="https://shop.de.q-railing.com/product/image/medium/100519_0.jpg" width="100" height="100"/>
+      <img src={data1.data1} width="100" height="100"/>
+      <img src={data1.data1} width="100" height="100"/>
     </div>
     </div>  
   )

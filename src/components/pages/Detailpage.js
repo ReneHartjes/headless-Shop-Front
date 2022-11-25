@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Detailcross from '../includes/detail/Detailcross'
 import Detailimage from '../includes/detail/Detailimage'
 import Detailstats from '../includes/detail/Detailstats'
@@ -14,12 +14,20 @@ function Detailpage() {
         {"ArtNr":185263, "Price":30.22, "desc":"Ø65 mm | für Handlaufhalter Q-line MOD 0118 | Zinkdruckguss |für den Innenbereich 10051906519", "url":"https://shop.de.q-railing.com/product/image/medium/100519_0.jpg",
         "spez":"FürModell%0109/0113/0118§§Höhe%16 mm§§Material%Zinkdruckguss§§Modell%0519§§VPE%2 Stk.§§", "Titel":"ABDECKKAPPE FÜR HANDLAUFHALTER, Q-LINE, MOD 0519, ZINK","cross":"187264"
         }]
-        
+    
+        const params =  useParams()
+
+        let [cat, setcat] = useState([])
+    useEffect(() => {     fetch('https://fakestoreapi.com/products/'+params.artid)
+    .then(res=>res.json())
+    .then(json=>setcat(json))},[])
+
+
 
 
    let [data ,setdata]  = useState(dataa)  
    let [reqid, setreqid] = useState()
-   const params =  useParams()
+ 
    console.log(params)
   return (
 <>
@@ -30,10 +38,10 @@ function Detailpage() {
         <div className='Detail-page'>
         <div className='Detail-top'>
             <div className='Detail-img'>
-            <Detailimage data1={dataa[0].url}></Detailimage>
+            <Detailimage data1={cat.image}></Detailimage>
             </div>
             <div className='Detail-text'>
-                <Detailtext desc={dataa[0].desc} price={dataa[0].Price} titel={dataa[0].Titel} artnr={dataa[0].ArtNr}></Detailtext>
+                <Detailtext desc={cat.desciption} price={cat.price} titel={cat.title} artnr={cat.id}></Detailtext>
             </div>
         </div>
         <div className='Detail-Bottom'>

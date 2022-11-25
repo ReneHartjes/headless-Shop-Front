@@ -9,6 +9,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import RubView from './components/pages/RubView';
 
 
 function App() {
@@ -20,6 +21,18 @@ function App() {
     <Route path="/products" element={<Produkte />} />
     <Route path="/detail/:artid" element={<Detailpage />} />
     
+
+    <Route path="/products/Bodenprofile" element={<RubView cat="Bodenprofile"/>} />
+    <Route path="/products/FüllungenundHalter" element={<RubView cat="FüllungenundHalter"/>} />
+    <Route path="/products/Geländerpfosten" element={<RubView cat="Geländerpfosten" />} />
+    <Route path="/products/Glasleistenrohre" element={<RubView />} />
+    <Route path="/products/Handläufe" element={<RubView />} />
+    <Route path="/products/Französische Balkone" element={<RubView />} />
+    <Route path="/products/Bodenglasklemmen" element={<RubView />} />
+    <Route path="/products/Glasadapter" element={<RubView />} />
+    <Route path="/products/Befestigungsmaterial" element={<RubView />} />
+    <Route path="/products/Werkzeuge" element={<RubView />} />
+
     </Routes>
     
     </>
