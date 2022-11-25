@@ -1,0 +1,12 @@
+.Banner-wrap{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Banner-big{
+    flex-basis: 80%;
+}
+.Banner-small{
+    flex-basis: 20%;
+}

@@ -1,0 +1,11 @@
+.Highlights-card-wrapper{
+    display:flex;
+    justify-content: space-between;
+}
+
+.Highlights-card{
+    flex-basis: 30%;
+}
+.Highlights-card img{
+    max-width: 100%;
+}

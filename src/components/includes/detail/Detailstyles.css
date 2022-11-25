@@ -1,0 +1,24 @@
+.Detail-top{
+    display:flex;
+    justify-content: space-around;
+}
+.Detail-Bottom{
+    display:flex
+}
+.Detail-wrap{
+    max-width:1170px
+}
+.Detail-page{
+ width: 100%;
+}
+
+.Detail-img{
+    flex-basis: 50%;
+}
+.Detail-text{
+    flex-basis: 50%;
+}
+
+.Detail-img-comp{
+    width: 100%;
+}
