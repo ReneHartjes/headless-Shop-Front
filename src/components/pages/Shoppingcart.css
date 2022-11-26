@@ -1,0 +1,13 @@
+.WK-card{
+    display: flex;
+
+}
+.WK-card-img{
+   margin-right: 20px;
+}
+.WK-card-text{
+    flex-basis: 60%;
+}
+.hidden{
+    opacity: 0;
+}

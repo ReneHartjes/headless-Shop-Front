@@ -3,6 +3,7 @@ import './App.css';
 import Mainpage from './components/pages/Mainpage';
 import Produkte from './components/pages/Produkte';
 import Detailpage from './components/pages/Detailpage';
+import Shoppingcart from './components/pages/Shoppingcart';
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,6 +21,7 @@ function App() {
     <Route path="/" element={<Mainpage />} />
     <Route path="/products" element={<Produkte />} />
     <Route path="/detail/:artid" element={<Detailpage />} />
+    <Route path="/cart" element={<Shoppingcart />} />
     
 
     <Route path="/products/Bodenprofile" element={<RubView cat="Bodenprofile"/>} />
