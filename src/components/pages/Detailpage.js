@@ -28,7 +28,7 @@ function Detailpage() {
    let [data ,setdata]  = useState(dataa)  
    let [reqid, setreqid] = useState()
  
-   console.log(params)
+   console.log(cat)
   return (
 <>
 <Header></Header>
@@ -41,7 +41,7 @@ function Detailpage() {
             <Detailimage data1={cat.image}></Detailimage>
             </div>
             <div className='Detail-text'>
-                <Detailtext desc={cat.desciption} price={cat.price} titel={cat.title} artnr={cat.id}></Detailtext>
+                <Detailtext desc={cat.description} price={cat.price} titel={cat.title} artnr={cat.id}></Detailtext>
             </div>
         </div>
         <div className='Detail-Bottom'>

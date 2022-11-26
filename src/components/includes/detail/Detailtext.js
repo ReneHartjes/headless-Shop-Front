@@ -8,7 +8,7 @@ function Detailtext(props) {
 
   let [descy, setdescy] = useState()
   useEffect(() => { setdescy(props.desc)},[])
-
+  console.log(props)
   function addtocart(){
     document.cookie = document.cookie+"wkproduct="+props.artnr;
     let rn = sessionStorage.getItem("wkproduct");
