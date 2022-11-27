@@ -1,9 +1,11 @@
 
 import './App.css';
+
 import Mainpage from './components/pages/Mainpage';
 import Produkte from './components/pages/Produkte';
 import Detailpage from './components/pages/Detailpage';
 import Shoppingcart from './components/pages/Shoppingcart';
+import {WkContext} from './components/includes/context/WkContext'
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,15 +13,19 @@ import {
   Link
 } from "react-router-dom";
 import RubView from './components/pages/RubView';
+import { useState } from 'react';
 
 
 function App() {
+
+  const [wkinhalt, setWkinhalt] = useState([])
   return (
     <Router>
     <>
     <Routes>
     <Route path="/" element={<Mainpage />} />
     <Route path="/products" element={<Produkte />} />
+ 
     <Route path="/detail/:artid" element={<Detailpage />} />
     <Route path="/cart" element={<Shoppingcart />} />
     

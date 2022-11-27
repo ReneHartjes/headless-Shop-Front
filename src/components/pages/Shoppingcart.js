@@ -24,6 +24,14 @@ function Shoppingcart() {
         const API = "https://fakestoreapi.com/products/"+prods[i]
         const data = axios.get(API).then(res=>{setwkprodarr(wkprodarr => [...wkprodarr, res.data]);})}
         console.log(wkprodarr)
+
+    }
+
+
+    function cookieset(){
+
+
+
     }
 
 

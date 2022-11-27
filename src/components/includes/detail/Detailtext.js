@@ -10,7 +10,7 @@ function Detailtext(props) {
   useEffect(() => { setdescy(props.desc)},[])
   console.log(props)
   function addtocart(){
-    document.cookie = document.cookie+"wkproduct="+props.artnr;
+    document.cookie = document.cookie+"wkproduct="+props.artnr+";";
     let rn = sessionStorage.getItem("wkproduct");
     rn = rn + "§§" + props.artnr;
     sessionStorage.setItem("wkproduct", rn);
@@ -36,8 +36,8 @@ function Detailtext(props) {
       <div>
         <button onClick={()=>addtocart()}>
           In den Warenkorb legen
-        </button>
-        <a href="/cart">goto cart</a>
+        </button><br /><br/>
+        <a href="/cart">goto cart </a>
       </div>
     </div>
 

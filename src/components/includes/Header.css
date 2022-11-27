@@ -11,6 +11,10 @@
 .Header{
     width: 1170px;
 }
+.Header a{
+    text-decoration: none;
+    color:black
+}
 .Header-top{
     display:flex;
     justify-content: space-between;
@@ -62,14 +66,20 @@
 .Header-bottom{
     background-color: #f7f7f7;
     height: 52px;
+    display:flex;
+    align-items: center;
 }
 
 .Header-bottom ul {
     display: flex;
     justify-content: left;
+    
 }
 .Header-bottom ul li{
     margin: 10px;
     list-style: none;
+
 }
+
+
 
