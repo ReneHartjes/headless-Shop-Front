@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../includes/Header'
 import Footer from '../includes/Footer'
 import axios from 'axios'
 import "./Shoppingcart.css"
 function Shoppingcart() {
 
+    useEffect(() => {  document.getElementById("loadbtn").click()   },[])
 
     let [scart, setscart] = useState([])
-   
+
     console.log(sessionStorage.getItem("wkproduct"))
     let wkproducts = sessionStorage.getItem("wkproduct");
     let prods ;
@@ -16,6 +17,7 @@ function Shoppingcart() {
    
     window.onload = function(){
         document.getElementById("loadbtn").click()
+        
     }
 
     function loadscart(){
@@ -36,6 +38,7 @@ function Shoppingcart() {
 
 
 }
+
 function emptyscart(props){
     sessionStorage.removeItem("wkproduct");
     window.location.reload()
